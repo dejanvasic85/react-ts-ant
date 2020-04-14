@@ -33,9 +33,7 @@ module.exports = [
   {
     test: /\.ts(x?)$/,
     exclude: excludedFolders,
-    use: {
-      loader: 'ts-loader',
-    },
+    loader: ['ts-loader', 'babel-loader'],
   },
   {
     test: /\.less?$/,
@@ -44,25 +42,11 @@ module.exports = [
   },
   {
     test: /\.svg?$/,
-    oneOf: [
+    exclude: /node_modules/,
+    loader: [
       {
-        include: path.resolve(__dirname, '../node_modules/seek-style-guide'),
-        loader: [
-          {
-            loader: 'raw-loader',
-            options: { name: getFullHashedUrl(imageBundleLocation) },
-          },
-          'svgo-loader',
-        ],
-      },
-      {
-        exclude: /node_modules/,
-        loader: [
-          {
-            loader: 'file-loader',
-            options: { name: getFullHashedUrl(imageBundleLocation) },
-          },
-        ],
+        loader: 'file-loader',
+        options: { name: getFullHashedUrl(imageBundleLocation) },
       },
     ],
   },

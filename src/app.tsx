@@ -1,10 +1,11 @@
 import React from 'react';
-import { Button } from 'antd';
+import { Button, Typography } from 'antd';
 
 const App = () => {
   return (
     <div>
-      Hello world <Button type="primary">This should be styled</Button>
+      <Typography.Title>Hello world</Typography.Title>
+      <Button type="primary">This should be styled</Button>
     </div>
   );
 };
