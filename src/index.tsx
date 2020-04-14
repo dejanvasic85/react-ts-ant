@@ -1,7 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Hello from './hello';
+import StyleProvider from './StyleProvider';
+
+import App from './app';
+
+const Root = () => {
+  return (
+    <StyleProvider>
+      <App />
+    </StyleProvider>
+  );
+};
 
 //console.log('REact dom', ReactDOM);
-ReactDOM.render(<Hello />, document.getElementById('root'));
+ReactDOM.render(<Root />, document.getElementById('root'));

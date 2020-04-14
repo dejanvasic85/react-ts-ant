@@ -9,7 +9,14 @@
     "jsx": "react",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "customMatcher": "\\.less$",
+        "camelCase": true
+      }
+    ]
   },
   "include": ["src"],
   "exclude": ["node_modules"]

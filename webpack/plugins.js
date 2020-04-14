@@ -14,7 +14,7 @@ module.exports = [
   new HtmlWebpackPlugin({
     inlineSource: 'runtime~.+\\.js',
     template: './index.html',
-    favicon: 'favicon.png',
+    favicon: 'favicon.ico',
     ...templateVars,
   }),
 

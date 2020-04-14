@@ -1,4 +1,5 @@
 const path = require('path');
+const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { isDevEnvironment, excludedFolders, localIdentName, imageBundleLocation } = require('./env');
 
@@ -8,16 +9,23 @@ const cssLoaders = [
   {
     loader: 'css-loader',
     options: {
-      modules: true,
+      modules: {
+        localIdentName,
+      },
       importLoaders: 3,
-      localIdentName,
     },
   },
   {
     loader: 'postcss-loader',
+    options: {
+      plugins: [autoprefixer()],
+    },
   },
   {
     loader: 'less-loader',
+    options: {
+      javascriptEnabled: true,
+    },
   },
 ];
 
