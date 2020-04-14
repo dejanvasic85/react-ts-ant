@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-dev": "webpack-dev-server --config ./webpack/config.js"
+    "build": "rm -rf public && mkdir public && webpack --config ./webpack/config.js -p",
+    "start-dev": "webpack-dev-server --config ./webpack/config.js",
+    "start-prod": "npm run build && node ./test/mock-server.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +15,8 @@
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
     "circular-dependency-plugin": "^5.2.0",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
     "html-webpack-inline-source-plugin": "0.0.10",
     "html-webpack-plugin": "^4.2.0",
     "mini-css-extract-plugin": "^0.9.0",
