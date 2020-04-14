@@ -3,7 +3,7 @@ const path = require('path');
 const plugins = require('./plugins');
 const loaders = require('./loaders');
 // const optimization = require('./plugins');
-// const alias = require('./plugins');
+// const alias = require('./alias');
 
 const { isDevEnvironment, jsBundleLocation, publicPath, port } = require('./env');
 

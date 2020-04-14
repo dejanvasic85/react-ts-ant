@@ -4,10 +4,11 @@ const isDevEnvironment = NODE_ENV !== 'production';
 
 //  CSS-Module className local identity
 const localIdentName = isDevEnvironment ? '[name]__[local]--[hash:base64:5]' : '[hash:base64:5]';
+const excludedFolders = /node_modules\/(?!(antd)\/)/;
 
 module.exports = {
   cssBundleLocation: 'assets/css',
-  excludedFolders: /node_modules/,
+  excludedFolders,
   imageBundleLocation: 'assets/images',
   isAnalyzeEnvironment: DEBUG === 'analyze',
   isDevEnvironment,
