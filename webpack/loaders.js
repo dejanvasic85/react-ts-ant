@@ -1,7 +1,12 @@
-const path = require('path');
+const fs = require('fs');
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const lessToJs = require('less-vars-to-js');
+
 const { isDevEnvironment, excludedFolders, localIdentName, imageBundleLocation, rootPath } = require('./env');
+
+const themeFile = fs.readFileSync(`${rootPath}/src/theme.less`, 'utf-8');
+const modifyVars = lessToJs(themeFile, { resolveVariables: true, stripPrefix: true });
 
 const getFullHashedUrl = (file) => `${file}/[name].[hash:8].[ext]`;
 
@@ -19,9 +24,7 @@ const antCssLoaders = [
     loader: 'less-loader',
     options: {
       javascriptEnabled: true,
-      modifyVars: {
-        'primary-color': '#44546A',
-      },
+      modifyVars,
     },
   },
 ];
