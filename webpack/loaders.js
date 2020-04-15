@@ -8,7 +8,16 @@ module.exports = [
   {
     test: /\.ts(x?)$/,
     exclude: excludedFolders,
-    loader: 'babel-loader',
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: ['@babel/preset-env', '@babel/preset-react', '@babel/typescript'],
+        plugins: [
+          'transform-class-properties',
+          ['import', { libraryName: 'antd', libraryDirectory: 'es', style: true }],
+        ],
+      },
+    },
   },
   {
     test: /antd.*\.less$/,
