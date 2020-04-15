@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import StyleProvider from './StyleProvider';
 
-import App from './app';
+import App from './App';
 
 const Root = () => {
   return (
