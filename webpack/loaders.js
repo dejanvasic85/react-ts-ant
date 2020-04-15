@@ -1,19 +1,19 @@
 const path = require('path');
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { isDevEnvironment, excludedFolders, localIdentName, imageBundleLocation } = require('./env');
+const { isDevEnvironment, excludedFolders, localIdentName, imageBundleLocation, rootPath } = require('./env');
 
 const getFullHashedUrl = (file) => `${file}/[name].[hash:8].[ext]`;
 
 const cssLoaders = [
   {
     loader: 'css-loader',
-    options: {
-      modules: {
-        localIdentName,
-      },
-      importLoaders: 3,
-    },
+    // options: {
+    //   modules: {
+    //     localIdentName,
+    //     importLoaders: 3,
+    //   },
+    // },
   },
   {
     loader: 'postcss-loader',
@@ -25,6 +25,9 @@ const cssLoaders = [
     loader: 'less-loader',
     options: {
       javascriptEnabled: true,
+      modifyVars: {
+        'primary-color': '#44546A',
+      },
     },
   },
 ];
@@ -33,7 +36,7 @@ module.exports = [
   {
     test: /\.ts(x?)$/,
     exclude: excludedFolders,
-    loader: ['ts-loader', 'babel-loader'],
+    loader: 'babel-loader',
   },
   {
     test: /\.less?$/,

@@ -18,4 +18,4 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(port, () => console.log(`Mock S3 server running on ${port}`));
+app.listen(port, () => console.log(`Mock server running on ${port}`));

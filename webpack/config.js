@@ -5,9 +5,7 @@ const loaders = require('./loaders');
 // const optimization = require('./plugins');
 // const alias = require('./alias');
 
-const { isDevEnvironment, jsBundleLocation, publicPath, port } = require('./env');
-
-const rootPath = path.resolve(__dirname, './../');
+const { isDevEnvironment, jsBundleLocation, publicPath, port, rootPath } = require('./env');
 
 module.exports = {
   entry: './index.tsx',
@@ -40,7 +38,7 @@ module.exports = {
     ...(!isDevEnvironment ? { stats: 'errors-only' } : null),
   }),
   resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
+    extensions: ['.ts', '.tsx', '.js', '.less'],
 
     // alias
   },
