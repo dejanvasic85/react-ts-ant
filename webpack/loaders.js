@@ -5,15 +5,9 @@ const { isDevEnvironment, excludedFolders, localIdentName, imageBundleLocation, 
 
 const getFullHashedUrl = (file) => `${file}/[name].[hash:8].[ext]`;
 
-const cssLoaders = [
+const antCssLoaders = [
   {
     loader: 'css-loader',
-    // options: {
-    //   modules: {
-    //     localIdentName,
-    //     importLoaders: 3,
-    //   },
-    // },
   },
   {
     loader: 'postcss-loader',
@@ -32,11 +26,35 @@ const cssLoaders = [
   },
 ];
 
+const cssLoaders = [
+  {
+    loader: 'css-loader',
+    options: {
+      modules: {
+        localIdentName,
+      },
+    },
+  },
+  {
+    loader: 'postcss-loader',
+    options: {
+      plugins: [autoprefixer()],
+    },
+  },
+  {
+    loader: 'less-loader',
+  },
+];
+
 module.exports = [
   {
     test: /\.ts(x?)$/,
     exclude: excludedFolders,
     loader: 'babel-loader',
+  },
+  {
+    test: /antd.*\.less$/,
+    loader: isDevEnvironment ? ['style-loader', ...antCssLoaders] : [MiniCssExtractPlugin.loader, ...antCssLoaders],
   },
   {
     test: /\.less?$/,
@@ -45,7 +63,7 @@ module.exports = [
   },
   {
     test: /\.svg?$/,
-    exclude: /node_modules/,
+    exclude: excludedFolders,
     loader: [
       {
         loader: 'file-loader',
@@ -55,7 +73,7 @@ module.exports = [
   },
   {
     test: /\.(jpg|png)?$/,
-    exclude: /node_modules/,
+    exclude: excludedFolders,
     loader: [
       {
         loader: 'file-loader',

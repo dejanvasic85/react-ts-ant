@@ -6,7 +6,7 @@ const rootPath = path.resolve(__dirname, './../');
 
 //  CSS-Module className local identity
 const localIdentName = isDevEnvironment ? '[name]__[local]--[hash:base64:5]' : '[hash:base64:5]';
-const excludedFolders = /node_modules\/(?!(antd)\/)/;
+const excludedFolders = /node_modules/;
 
 module.exports = {
   cssBundleLocation: 'assets/css',
