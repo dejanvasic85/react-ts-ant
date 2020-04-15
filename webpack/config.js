@@ -3,7 +3,7 @@ const path = require('path');
 const plugins = require('./plugins');
 const loaders = require('./loaders');
 // const optimization = require('./plugins');
-// const alias = require('./alias');
+const alias = require('./alias');
 
 const { isDevEnvironment, jsBundleLocation, publicPath, port, rootPath } = require('./env');
 
@@ -40,7 +40,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.less'],
 
-    // alias
+    alias,
   },
   module: {
     rules: loaders,

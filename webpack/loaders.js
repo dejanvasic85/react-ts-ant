@@ -5,7 +5,7 @@ const lessToJs = require('less-vars-to-js');
 
 const { isDevEnvironment, excludedFolders, localIdentName, imageBundleLocation, rootPath } = require('./env');
 
-const themeFile = fs.readFileSync(`${rootPath}/src/theme.less`, 'utf-8');
+const themeFile = fs.readFileSync(`${rootPath}/src/styles/theme.less`, 'utf-8');
 const modifyVars = lessToJs(themeFile, { resolveVariables: true, stripPrefix: true });
 
 const getFullHashedUrl = (file) => `${file}/[name].[hash:8].[ext]`;

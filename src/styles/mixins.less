@@ -1,0 +1,25 @@
+.tablet-and-up(@rules) {
+  @media @tablet-and-up {
+    @rules();
+  }
+}
+
+.tablet-landscape-and-up(@rules) {
+  @media @tablet-landscape-and-up {
+    @rules();
+  }
+}
+
+.desktop-and-up(@rules) {
+  @media @desktop-and-up {
+    @rules();
+  }
+}
+
+.hide-for-mobile(@desktop-display: block) {
+  display: none;
+
+  .tablet-and-up({
+    display: @desktop-display;
+  });
+}
