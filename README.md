@@ -8,3 +8,8 @@ Features:
 - Typescript
 - Ant Design
 - Webpack 
+
+Coming soon:
+- Jest
+- Eslint
+- Pre-Commit (husky)
