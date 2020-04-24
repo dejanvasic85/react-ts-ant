@@ -24,7 +24,7 @@
     "babel-plugin-transform-class-properties": "6.24.1",
     "circular-dependency-plugin": "5.2.0",
     "compression": "1.7.4",
-    "css-loader": "3.5.2",
+    "css-loader": "3.5.3",
     "express": "4.17.1",
     "html-webpack-inline-source-plugin": "0.0.10",
     "html-webpack-plugin": "4.2.0",
