@@ -36,7 +36,7 @@
     "postcss-loader": "3.0.0",
     "source-map-loader": "0.2.4",
     "style-loader": "1.1.4",
-    "typescript": "3.8.3",
+    "typescript": "3.9.2",
     "typescript-plugin-css-modules": "2.2.0",
     "webpack": "4.42.1",
     "webpack-bundle-analyzer": "3.7.0",
