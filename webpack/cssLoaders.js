@@ -22,8 +22,10 @@ module.exports.antStyleLoaders = [
   {
     loader: 'less-loader',
     options: {
-      javascriptEnabled: true,
-      modifyVars,
+      lessOptions: {
+        javascriptEnabled: true,
+        modifyVars,
+      },
     },
   },
 ];

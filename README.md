@@ -8,6 +8,7 @@ Features:
 - Typescript
 - Ant Design
 - Webpack 
+- CSS modules (less)
 
 Coming soon:
 - Jest
