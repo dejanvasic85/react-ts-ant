@@ -14,3 +14,18 @@ Features:
 Coming soon:
 - Eslint
 - Pre-Commit (husky)
+
+
+### Testing
+
+Unit tests with code coverage:
+
+```sh
+npm test
+```
+
+Watching on changes:
+
+```
+npm run test:watch
+```
