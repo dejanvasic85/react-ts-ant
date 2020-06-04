@@ -1,15 +1,22 @@
 import React from 'react';
-import { Button, Typography, Input, Layout } from 'antd';
+import { Layout, Typography } from 'antd';
 
 import styles from './App.less';
 
+const { Header, Content } = Layout;
+
 const App = () => {
   return (
-    <div className={styles.container}>
-      <Typography.Title>Hello world</Typography.Title>
-      <Button type="primary">This should be styled</Button>
-      <Input type="text" value="this is a text" />
-    </div>
+    <Layout>
+      <Header className={styles.heading}>To Do</Header>
+      <Content>
+        <div className={styles.container}>
+          <div className={styles.content}>
+            <Typography.Title level={4}>What is on for today?</Typography.Title>
+          </div>
+        </div>
+      </Content>
+    </Layout>
   );
 };
 
