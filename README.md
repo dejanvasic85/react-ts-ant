@@ -17,6 +17,20 @@ Features:
 - [ ] Pre-Commit (husky)
 - [ ] Demo / URL to deployed website
 
+## Running locally
+
+To start in development (hot reload mode) run the following command:
+
+```sh
+npm run dev
+```
+
+To run in a production mode:
+
+```sh
+npm start
+```
+
 ### Testing
 
 Unit tests with code coverage:
