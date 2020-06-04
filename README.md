@@ -13,6 +13,7 @@ Features:
 - [ ] Basic Todo Application
 - [ ] Circle CI or Travis CI pipeline
 - [ ] Deploy script for s3
+- [ ] Cypress e2e testing
 - [ ] Eslint
 - [ ] Pre-Commit (husky)
 - [ ] Demo / URL to deployed website
