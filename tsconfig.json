@@ -5,7 +5,7 @@
     "noImplicitAny": false,
     "module": "commonjs",
     "moduleResolution": "node",
-    "target": "esnext",
+    "target": "es2019",
     "jsx": "react",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,

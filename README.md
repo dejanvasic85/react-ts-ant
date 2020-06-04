@@ -9,8 +9,8 @@ Features:
 - Ant Design
 - Webpack 
 - CSS modules (less)
+- Jest - Enzyme
 
 Coming soon:
-- Jest
 - Eslint
 - Pre-Commit (husky)
