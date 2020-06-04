@@ -4,17 +4,18 @@ This is another opinionated boilerplate web development for a React Single Page 
 
 Features:
 
-- React
-- Typescript
-- Ant Design
-- Webpack 
-- CSS modules (less)
-- Jest - Enzyme
-
-Coming soon:
-- Eslint
-- Pre-Commit (husky)
-
+- [x] React
+- [x] Typescript
+- [x] Ant Design
+- [x] Webpack 
+- [x] CSS modules (less)
+- [x] Jest - Enzyme
+- [ ] Basic Todo Application
+- [ ] Circle CI or Travis CI pipeline
+- [ ] Deploy script for s3
+- [ ] Eslint
+- [ ] Pre-Commit (husky)
+- [ ] Demo / URL to deployed website
 
 ### Testing
 
