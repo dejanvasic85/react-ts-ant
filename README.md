@@ -4,13 +4,44 @@ This is another opinionated boilerplate web development for a React Single Page 
 
 Features:
 
-- React
-- Typescript
-- Ant Design
-- Webpack 
-- CSS modules (less)
-- Jest - Enzyme
+- [x] React
+- [x] Typescript
+- [x] Ant Design
+- [x] Webpack 
+- [x] CSS modules (less)
+- [x] Jest - Enzyme
+- [ ] Basic Todo Application
+- [ ] Circle CI or Travis CI pipeline
+- [ ] Deploy script for s3
+- [ ] Cypress e2e testing
+- [ ] Eslint
+- [ ] Pre-Commit (husky)
+- [ ] Demo / URL to deployed website
 
-Coming soon:
-- Eslint
-- Pre-Commit (husky)
+## Running locally
+
+To start in development (hot reload mode) run the following command:
+
+```sh
+npm run dev
+```
+
+To run in a production mode:
+
+```sh
+npm start
+```
+
+### Testing
+
+Unit tests with code coverage:
+
+```sh
+npm test
+```
+
+Watching on changes:
+
+```
+npm run test:watch
+```
