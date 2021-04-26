@@ -33,7 +33,7 @@
     "enzyme-adapter-react-16": "1.15.4",
     "express": "4.17.1",
     "html-webpack-inline-source-plugin": "0.0.10",
-    "html-webpack-plugin": "4.4.1",
+    "html-webpack-plugin": "4.5.2",
     "identity-obj-proxy": "3.0.0",
     "jest": "26.4.2",
     "jest-enzyme": "7.1.2",
